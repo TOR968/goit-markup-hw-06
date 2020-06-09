@@ -57,14 +57,52 @@
         </h1>
         <!-- <a class="btn" href="" data-open-modal>Заказать услугу</a> -->
         <button class="btn" data-open-modal>Заказать услугу</button>
-        <div class="backdrop is-hidden" data-backdrop>
+        <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quis
-              debitis quibusdam doloremque perspiciatis distinctio consequuntur
-              
-            </p>
-            <button data-close-modal>Закрыть</button>
+            <b>Оставьте свои данные, мы вам перезвоним</b>
+            <form class="form js-speaker-form">
+              <div class="form-fild">
+                <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Имя"
+                autofocus
+              />
+              </div>
+              <div class="form-fild">
+                <input
+                type="tel"
+                name="tel"
+                id="tel"
+                placeholder="Телефон"
+              />
+              </div>
+              <div class="form-fild">
+                <input 
+                type="email" 
+                name="mail" 
+                id="mail" 
+                placeholder="Почта" 
+                />
+              </div>
+              <div class="form-field">
+                  <textarea
+                  class="comment"
+                  name="comment"
+                  id="comment"
+                  rows="8"
+                  placeholder="Комментарий"
+                ></textarea>
+              </div>
+              <p>Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></p>
+              <button type="submit">Отправить</button>
+            </form>
+            <div class="modal-close" data-close-modal>
+              <svg class="close-back" width="18" height="18" >
+                <use xlink:href="./images/sprite.svg#close-back" />
+              </svg>
+            </div>
           </div>
         </div>
       </section>
@@ -436,11 +474,11 @@
         <!-- Подписаться -->
         <div class="subscribe">
           <b>Подпишитесь на рассылку</b>
-          <div class="input">
+          <div class="sub-input">
             <form>
               <input type="email" placeholder="E-mail" />
             </form>
-            <button class="button" type="button">
+            <button class="button" type="submit">
               Подписаться
             </button>
           </div>
@@ -449,5 +487,6 @@
       <p class="container">2020 | Developed by GoIT Students</p>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="/js/form.js"></script>
   </body>
 </html>
