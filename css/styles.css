@@ -779,23 +779,21 @@ textarea:not(:placeholder-shown) + .form-label-textarea,
  }
 
 .policy {
- /* display: flex; */
   margin-bottom: 30px ;
   color: var(--primary-text-color);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  /* align-items: center; */
-  /* justify-content: center; */
-  display: block;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .policy a{
+  display: inline-block;
   color: var(--accent-color);
   text-decoration: underline;
 }
 .checkbox {
-
   position: absolute;
   width: 1px;
   height: 1px;
@@ -810,12 +808,17 @@ textarea:not(:placeholder-shown) + .form-label-textarea,
   width: 15px;
   height: 15px;
   margin-right: 8px;
-  background-color: var(--primary-text-color);
   border: 2px solid #212121;
   border-radius: 2px;
   transition: transform 250ms var(--animation);
 }
-.checkbox:checked ~  .img-check{
+.checkbox:checked ~ .img-check{
+  transform: scale(1.1);
   background-color: var(--accent-color);
   background-origin: border-box;
+  background-image: url(https://raw.githubusercontent.com/luxplanjay/html-css-22/93703c92cb27ae9de9347ba190e6254308edf885/img/full-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: transparent;
 }
+
